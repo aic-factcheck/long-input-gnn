@@ -1,0 +1,10 @@
+__pycache__
+.ipynb_checkpoints
+checkpoints
+wandb
+src/afc.egg-info/
+results
+experiments/checkpoints
+experiments/sweeps/**/*.*
+!experiments/sweeps/**/*.yaml
+!experiments/sweeps/**/*.py

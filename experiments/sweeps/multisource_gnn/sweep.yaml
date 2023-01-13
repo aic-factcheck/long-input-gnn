@@ -1,0 +1,24 @@
+name: multisource-gnn-sweep
+project: multisource-gnn
+program: train.py
+method: random
+metric:
+    name: validation/accuracy.max
+    goal: maximize
+parameters:
+    batch_size:
+        values: [16, 32]
+    dropout:
+        values: [0.1, 0.3, 0.5]
+    hidden_features:
+        values: [64, 128, 256, 512]
+    n_layers:
+        values: [1, 2, 3, 4, 8]
+    n_heads:
+        values: [1, 2, 3, 4, 8]
+    pooling:
+        values: ["mean", "max"]
+    learning_rate:
+        values: [0.00001, 0.00002, 0.0001, 0.001]
+    epochs:
+        value: 50
